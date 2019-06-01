@@ -1,0 +1,24 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd"
+    loaded="loaded"
+    id="profile_page">
+    <ActionBar title="Mi perfil" class="h1 extra_bold white bg_red">
+        <NavigationButton text=" " android.systemIcon="ic_menu_back" tap="tapBack"/>
+    </ActionBar>
+    <ScrollView>
+        <Label  text="Nombres:" class="h2 black" />
+        <TextField  text="Milagros Loaiza" class="h2 black" />
+
+        <Label  text="Dirección de mi domo:" class="h2 black" />
+        <TextField  text="Av. Javier Prado # 5454" class="h2 black" />
+
+        <Label  text="Permitir acceso a mi domo:" class="h2 black" />
+        <TextField  text="SI" class="h2 black" />
+
+        <Label  text="Permitir enviar audio:" class="h2 black" />
+        <TextField  text="SI" class="h2 black" />
+
+        <Label  text="Nombres:" class="h2 black" />
+        <TextField  text="Victor Malaver" class="h2 black" />
+
+    </ScrollView>
+</Page>

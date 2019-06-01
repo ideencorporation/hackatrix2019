@@ -18,8 +18,7 @@ exports.tapBack = function () {
     nav.goBack();
 }
 exports.tapOptions = function () {
-    ls.setBool('clear', false);
-    nav.goTo('periods/periods', false);
+    nav.goTo('profile/profile', false);
 }
 function navToDetails(item) {
     console.dir(item);

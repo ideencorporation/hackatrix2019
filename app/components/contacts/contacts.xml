@@ -6,7 +6,7 @@
         <Label text="{{title}}" class="capitalize"/>
         <ActionItem tap="tapOptions"
             ios.position="right"
-            text="Buscar" android.position="popup"/>
+            text="Perfil" android.position="popup"/>
     </ActionBar>
     <GridLayout rows="auto,*,auto">
         <SearchBar row="0" id="searchBar" hint="{{sbHint}}" text="{{sbText}}" clear="onClear" submit="onSubmit" class="bg_grey" borderWidth="4"/>

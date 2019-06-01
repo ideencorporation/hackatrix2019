@@ -23,7 +23,6 @@
                     </StackLayout>
                     <Button row="6" id="btn" text="Login" tap="tapLogin" ios:padding="10" class="bg_red border white" width="220" marginTop="50"/>
 
-                    <ActivityIndicator id="activityIndicator" row="6" busy="{{ !loaded }}"  class="sky_blue bg_white circle" verticalAlignment="bottom" width="50" height="50"/>
                     <Label row="8" text="Beta 1.0.0" class="h4 center black"/>
                 </GridLayout> 
             </FlexboxLayout>
