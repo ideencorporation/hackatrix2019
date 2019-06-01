@@ -5,16 +5,25 @@
     xmlns="http://schemas.nativescript.org/tns.xsd">
     <ActionBar title="" class="h1 extra_bold white bg_red">
         <NavigationButton text=" " android.systemIcon="ic_menu_back" tap="tapBack"/>
-        <Label text="{{'Casa de '+name}}"/>
+        <Label text="Domo"/>
         <ActionItem tap="tapShared" 
             ios.position="right"
             text="Compartir" android.position="popup"></ActionItem>
     </ActionBar>
     <ScrollView>
         <GridLayout rows="auto" class="bg_red">
-            <GridLayout rows="auto">
-                <VideoPlayer:Video controls="false" autoplay="true" height="{{height}}" src="{{url_stream}}" verticalAlignment="middle"/>
-            </GridLayout>
+            <StackLayout class="p20">
+
+                <Label text="Nombre:" class="white p20_t"  />
+                <Label text="{{name}}" class="h2 white bold" />
+                <Label text="Domo:" class="white p20_t"  />
+                <Label text="{{address}}" class="h2 white bold" />
+
+                <GridLayout borderRadius="10">
+                    <VideoPlayer:Video controls="false" autoplay="true" height="{{height}}" src="{{url_stream}}" verticalAlignment="middle"/>
+                </GridLayout>
+                
+            </StackLayout>
             <GridLayout columns="*,*" class="p20 bg_red" verticalAlignment="bottom">
                 <Label col="0" text=" " class="bg_white circle" height="80"  width="80" />
                 <Image col="0" src="~/images/microphone.png" class="" height="50" />

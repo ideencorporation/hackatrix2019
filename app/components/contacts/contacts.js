@@ -33,38 +33,47 @@ function getData() {
     let sbText = (ViewModel.get('sbText') ? ViewModel.get('sbText') : '');
     var listView = [
         {  
-            'name': 'Kike',
-            'status': 'Disponible'
+            'address': 'Local Cafeteria',
+            'status': 'Disponible',
+            'name': 'Adm. Bernabe '
         },
         {  
-            'name': 'Kike',
-            'status': 'Disponible'
+            'address': 'Restaurante French',
+            'status': 'No disponible',
+            'name': 'Sr. Hernandez'
         },
         {  
-            'name': 'Kike',
-            'status': 'Disponible'
+            'address': 'Salon Spa',
+            'status': 'Disponible',
+            'name': 'Sr. Elizabeth Fernandez'
         },
         {  
-            'name': 'Kike',
-            'status': 'Disponible'
+            'address': 'Clinica Peruanita',
+            'status': 'Disponible',
+            'name': 'Dr. Echevarria'
         },
         {  
-            'name': 'Kike',
-            'status': 'Disponible'
+            'address': 'Tienda Central',
+            'status': 'Disponible',
+            'name': 'Adm. Sofia Loayza '
         },
         {  
-            'name': 'Kike',
-            'status': 'Disponible'
+            'address': 'Residencial Rodriguez',
+            'status': 'Disponible',
+            'name': 'Sr. Hernan Rodriguez'
         },
         {  
-            'name': 'Kike',
-            'status': 'Disponible'
+            'address': 'Productora Muebles',
+            'status': 'Disponible',
+            'name': 'Jefe Santillana'
         },
         {  
-            'name': 'Kike',
-            'status': 'Disponible'
+            'address': 'Parque la Innovacion',
+            'status': 'Disponible',
+            'name': 'Alc. Parra Jara'
         }
     ];
+
     for(let i = 0; i<listView.length; i++){
         listView[i].letter = listView[i].name.charAt(0);
         listView[i].id = i+1;
