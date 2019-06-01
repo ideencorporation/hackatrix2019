@@ -25,22 +25,9 @@ function navToDetails(item) {
     console.dir(item);
     nav.goTo('contacts/details/details', false, item);
 }
-function setSelected() {
-    const listView = ViewModel.get('listView');
-    for (const i in listView) {
-        if (listView[i].id == ViewModel.get('value')) {
-            listView[i].selected = true;
-        } else {
-            listView[i].selected = false;
-        }
-    }
-    ViewModel.set('listView', listView);
-    page.getViewById('listView').refresh();
-}
 exports.itemTap = function (args) {
     const listView = ViewModel.get('listView');
-    let selected = listView[args.index];
-    
+    navToDetails(listView);
 }
 function getData() {
     let sbText = (ViewModel.get('sbText') ? ViewModel.get('sbText') : '');
