@@ -12,6 +12,7 @@ exports.loaded = function (args) {
     ViewModel.set('title','Alerssis');
     getData();
     // setSearch();
+    hideKeyBoard();
     page.bindingContext = ViewModel;
 }
 exports.tapBack = function () {
