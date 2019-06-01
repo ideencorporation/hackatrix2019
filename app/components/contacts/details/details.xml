@@ -5,22 +5,22 @@
     xmlns="http://schemas.nativescript.org/tns.xsd">
     <ActionBar title="" class="h1 extra_bold white bg_red">
         <NavigationButton text=" " android.systemIcon="ic_menu_back" tap="tapBack"/>
-        <Label text="{{height}}"/>
-        <ActionItem tap="tapShared"
+        <Label text="{{'Casa de '+name}}"/>
+        <ActionItem tap="tapShared" 
             ios.position="right"
             text="Compartir" android.position="popup"></ActionItem>
     </ActionBar>
     <ScrollView>
-        <GridLayout rows="auto">
-            <GridLayout rows="auto" class="bg_green">
-                <Label text="{{name}}" class="h1"/>
-                <Label text="{{description}}" class="h2 silver bold"/>
-                <VideoPlayer:Video controls="false" autoplay="true" height="{{height}}" src="{{url_stream}}"/>
+        <GridLayout rows="auto" class="bg_red">
+            <GridLayout rows="auto">
+                <VideoPlayer:Video controls="false" autoplay="true" height="{{height}}" src="{{url_stream}}" verticalAlignment="middle"/>
             </GridLayout>
             <GridLayout columns="*,*" class="p20 bg_red" verticalAlignment="bottom">
-                <Label col="0" text="Sirena" class="bold center"/>
-                <Label col="1" text="Microfono" class="bold center"/>
-            </GridLayout>
+                <Label col="0" text=" " class="bg_white circle" height="80"  width="80" />
+                <Image col="0" src="~/images/microphone.png" class="" height="50" />
+                <Label col="1" text=" " class="bg_white circle" height="80"  width="80" />
+                <Image col="1" src="~/images/warning.png" class="" height="50" />
+            </GridLayout>   
         </GridLayout>
     </ScrollView>
 </Page>

@@ -10,9 +10,10 @@ exports.navigatingTo = function (args) {
     for (const i in item) {
         ViewModel.set(i, item[i]);
     }
+    console.dir(item);
     ViewModel.set('width', 100);
-    ViewModel.set('height', 200);
-    ViewModel.set('url_stream', "https://5a8d73edc0407.streamlock.net:443/doohsip/invianip01.stream/playlist.m3u8");
+    ViewModel.set('height', 400);
+    ViewModel.set('url_stream', 'https://5a8d73edc0407.streamlock.net:443/doohsip/invianip'+(item.id<10?'0'+item.id:item.id)+'.stream/playlist.m3u8');
     page.bindingContext = ViewModel;
 }
 exports.tapBack = function () {

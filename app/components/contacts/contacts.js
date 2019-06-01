@@ -26,7 +26,7 @@ function navToDetails(item) {
     nav.goTo('contacts/details/details', false, item);
 }
 exports.itemTap = function (args) {
-    const listView = ViewModel.get('listView');
+    const listView = ViewModel.get('listView')[args.index];
     navToDetails(listView);
 }
 function getData() {
@@ -67,6 +67,7 @@ function getData() {
     ];
     for(let i = 0; i<listView.length; i++){
         listView[i].letter = listView[i].name.charAt(0);
+        listView[i].id = i+1;
     }
     ViewModel.set('listView', listView);
 }
