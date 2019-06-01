@@ -1,0 +1,30 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd"
+    loaded="loaded"
+    id="advertisers_page">
+    <ActionBar title="{{title}}" class="h1 extra_bold white bg_red">
+        <NavigationButton text=" " android.systemIcon="ic_menu_back" tap="tapBack"/>
+        <Label text="{{title}}" class="capitalize"/>
+        <ActionItem tap="tapOptions"
+            ios.position="right"
+            text="Buscar" android.position="popup"/>
+    </ActionBar>
+    <GridLayout rows="auto,*,auto">
+        <SearchBar row="0" id="searchBar" hint="{{sbHint}}" text="{{sbText}}" clear="onClear" submit="onSubmit" class="bg_grey" borderWidth="4"/>
+        <ListView row="1" id="listView" items="{{ listView }}" itemTap="itemTap" separatorColor="#E1E2E1" itemTemplateSelector="selectItemTemplate" class="bg_grey">
+            <ListView.itemTemplate>
+                 <GridLayout rows="auto" columns="auto,*" class="p20"> 
+                    <!-- <Image rowSpan="4" col="0" src="{{responsible.avatar_url}}" verticalAlignment="middle" height="50" width="50" class="circle bg_white"  visibility="{{$parents['ListView'].isSelect?'collapsed':'visible'}}"/> -->
+                    <GridLayout>
+                        <Label rowSpan="4" col="0" text=" " verticalAlignment="middle" height="50" width="50" class="circle bg_red white center center"/>
+                        <Label rowSpan="4" col="0" text="{{letter}}" verticalAlignment="middle" class="center white bold h2"/>
+                    </GridLayout>
+                    
+                    <StackLayout row="0" col="2" class="p10_l"> 
+                        <Label text="{{name}}" class="h3 black bold p10_r"/>
+                        <Label text="{{status}}" class="h3 black"/>
+                    </StackLayout>
+                </GridLayout>
+            </ListView.itemTemplate> 
+        </ListView>
+    </GridLayout>
+</Page>

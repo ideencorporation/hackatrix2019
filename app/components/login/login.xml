@@ -1,0 +1,32 @@
+<Page
+    id="login_page"
+    class="bg_grey"
+    navigatingTo="onNavigatingTo"  
+    xmlns="http://schemas.nativescript.org/tns.xsd"
+    actionBarHidden="true">
+    <ScrollView>
+        <AbsoluteLayout width="100%" height="100%">
+            
+            <Image src="~/images/earth.png" width="350" height="350" id="earth" verticalAlignment="bottom" marginLeft="{{width - 250}}" marginTop="{{height - 400}}"/>
+            <FlexboxLayout flexDirection="column" height="100%" width="100%"
+                    id="app">
+                <GridLayout rows="100,100,0,auto,auto,auto,auto,*,auto">
+                    <Image row="1" src="~/images/logo.jpeg" class="fadeInDown"/>
+                    <TextField row="3" id="user" text="{{user}}" hint="User" ios:padding="10 10 10 20" class="p20_l bg_white border" width="220" marginTop="50"/>
+                    <TextField row="4" id="pass" text="{{pass}}" hint="Password" ios:padding="10 10 10 20" class="p20_l bg_white border" width="220" marginTop="30" secure="true"/>
+                    <StackLayout row="5"  width="220" orientation="horizontal" tap="tapRecord">
+                        <Label text="{{isRecord?'&#xf143;':'&#xf139;'}}" class="{{isRecord?'h3 icon p20 sky_blue':'h3 icon p20 silver'}}" verticalAlignment="center"/>
+                        <StackLayout>
+                            <Label text="Recordarme" class="h4 p20_t_b" verticalAlignment="center"/>
+                            <Label text="Crear cuenta" class="h4 p20_t_b" verticalAlignment="center"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <Button row="6" id="btn" text="Login" tap="tapLogin" ios:padding="10" class="bg_red border white" width="220" marginTop="50"/>
+
+                    <ActivityIndicator id="activityIndicator" row="6" busy="{{ !loaded }}"  class="sky_blue bg_white circle" verticalAlignment="bottom" width="50" height="50"/>
+                    <Label row="8" text="Beta 1.0.0" class="h4 center black"/>
+                </GridLayout> 
+            </FlexboxLayout>
+        </AbsoluteLayout>  
+    </ScrollView> 
+</Page>

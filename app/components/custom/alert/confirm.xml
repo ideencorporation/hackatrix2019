@@ -1,0 +1,8 @@
+<GridLayout id="alert" class="{{alert?'bg_disabled':''}}">
+    <StackLayout width="250" class="bg_white scale_in" borderRadius="5" verticalAlignment="middle">
+        <Label text="{{alert_header?alert_header:'Confirmar!'}}" class="h2 extra_bold center black" paddingTop="40"/>
+        <Label text="{{alert_body?alert_body:'Confirmar!'}}" class="h4 center plomo"/>
+        <Button text="{{alert_btn?alert_btn:'OK'}}" class="{{alert_bg?'white '+alert_bg:'white bg_sky_blue_gradient'}}" borderRadius="5" margin="10" tap="tapAlertConfirm"/>
+    </StackLayout>
+    <Label text="&#xf129;" class="{{alert_bg?'h2 icon white circle center p20 border_white scale_in '+alert_bg:'h2 icon white circle center p20 border_white scale_in bg_sky_blue_gradient'}}" borderWidth="4" verticalAlignment="middle" marginTop="-160"/>
+</GridLayout>

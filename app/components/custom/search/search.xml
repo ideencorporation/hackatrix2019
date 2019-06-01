@@ -1,0 +1,11 @@
+<ScrollView>
+    <StackLayout verticalAlignment="middle"> 
+        <Label text="{{searchTitle}}" class="h1 extra_bold black center" textWrap="true"/>
+        <Label text="__" class="h1 sky_blue extra_bold center p20_b"/>
+        <Label col="0" text="{{searchSubTitle}}" class="h2 semi_bold dark_silver center p20"/>
+        <GridLayout nav="{{searchNav}}" tap="tapSelect" class="p20_b">
+            <Label col="1" text="&#xf113;" class="icon h1 p20 bg_sky_blue_gradient center" borderRadius="10" verticalAlignment="center"/> 
+            <Label col="1" text="&#xf113;" class="icon h1 p20 white center" borderRadius="10" verticalAlignment="center"/> 
+        </GridLayout>
+    </StackLayout> 
+</ScrollView>

@@ -1,0 +1,43 @@
+<Page
+    id="welcome_page"
+    class="bg_white"
+    navigatingTo="navigatingTo"  
+    xmlns="http://schemas.nativescript.org/tns.xsd"
+    xmlns:ns="nativescript-carousel"
+    actionBarHidden="true">
+    <GridLayout rows="*,auto">
+        <GridLayout row="0">
+            <ns:Carousel height="100%" width="100%" pageChanged="myChangeEvent" pageTapped="mySelectedEvent" indicatorColor="#A60909" indicatorColorUnselected="#c1c1c1" finite="true" bounce="false" showIndicator="true" verticalAlignment="top" android:indicatorAnimation="drop" color="#c1c1c1">
+                <ns:CarouselItem id="slide1" backgroundColor="white" verticalAlignment="middle">
+                    <GridLayout rows="auto,auto,*" paddingTop="50">
+                        <Label row="0" text="Grupos de vigilacia" fontSize="30" class="p20 padding black EncodeSansSemiCondensed-ExtraLight"/>
+                        <Label row="1" text="Cree un grupo para vigilar sus propiedades" textWrap="true" class="h3 p20_l_r" color="#c1c1c1"/>
+                        <Image row="2" src="~/images/welcome/comunidad_vigilancia.jpg" height="{{width}}" width="{{width}}"/> 
+                    </GridLayout>
+                </ns:CarouselItem>
+                <ns:CarouselItem id="slide2" backgroundColor="white" verticalAlignment="middle">
+                    <GridLayout rows="auto,auto,*" paddingTop="50"> 
+                        <Label row="0" text="Envio de audio" fontSize="30" class="p20 padding black EncodeSansSemiCondensed-ExtraLight"/>
+                        <Label row="1" text="Envíe audio en tiempo real para disuadir a una amenaza" textWrap="true" class="h3 p20_l_r" color="#c1c1c1"/>
+                        <Image row="2" src="~/images/welcome/aviso_llamada.jpg" height="{{width}}" width="{{width}}"/>
+                    </GridLayout>
+                </ns:CarouselItem>
+                <ns:CarouselItem id="slide3" backgroundColor="white" verticalAlignment="middle">
+                    <GridLayout rows="auto,auto,*" paddingTop="50">
+                        <Label row="0" text="rewewrewr" fontSize="30" class="p20 padding black EncodeSansSemiCondensed-ExtraLight"/>
+                        <Label row="1" text="fdsfdsfs" textWrap="true" class="h3 p20_l_r" color="#c1c1c1"/>  
+                        <Image row="2" src="~/images/welcome/casa_alarma.jpg" height="{{width}}" width="{{width}}"/>
+                    </GridLayout>
+                </ns:CarouselItem>
+                <ns:CarouselItem id="slide4" backgroundColor="white" verticalAlignment="middle">
+                    <GridLayout rows="auto,auto,*" paddingTop="50"> 
+                        <Label row="0" text="sadadsada" fontSize="30" class="p20 padding black EncodeSansSemiCondensed-ExtraLight"/>
+                        <Label row="1" text="sdasdsada" textWrap="true" class="h3 p20_l_r" color="#c1c1c1"/>
+                        <Image row="2" src="~/images/welcome/casa_camara.jpg" height="{{width}}" width="{{width}}"/>
+                    </GridLayout>
+                </ns:CarouselItem>
+            </ns:Carousel>
+        </GridLayout>
+        <Button id="btn" row="1" text="Login" tap="tapLogin" ios:padding="10" class="bg_red white circle" width="{{width}}" marginBottom="20" marginTop="20"/>
+    </GridLayout> 
+</Page>

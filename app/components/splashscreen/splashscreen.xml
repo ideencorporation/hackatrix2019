@@ -1,0 +1,7 @@
+<Page xmlns="http://www.nativescript.org/tns.xsd"
+    id="splashscreen_page"
+    class="bg_grey"
+    loaded="loaded" 
+	actionBarHidden="true">
+    <Image src="res://logo" stretch="none" verticalAlignment="middle"/> 
+</Page> 
