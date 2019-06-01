@@ -7,4 +7,4 @@ exports.onNavigatingTo = function (args) {
 }
 exports.tapLogin = function () {
     nav.goTo('contacts/contacts', true);
-}
+} 
